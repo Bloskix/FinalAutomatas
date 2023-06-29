@@ -1,5 +1,6 @@
 import pandas as pd
-from Menu import file_name
+
+file_name = r"Listado temas 2023.xlsx"
 
 def top_10_most_viewed():
     try:

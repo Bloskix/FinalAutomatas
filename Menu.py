@@ -46,8 +46,6 @@ def action(option):
         print("Cerrando programa...")
         pass
 
-file_name = r"Listado temas 2023.xlsx"
-
 while True:
     menu()
     option = read_option()

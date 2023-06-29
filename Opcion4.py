@@ -1,7 +1,8 @@
 import pandas as pd
 import re, time
 from openpyxl import load_workbook
-from Menu import file_name
+
+file_name = r"Listado temas 2023.xlsx"
 
 def submenu():
     print("1.Agregar por consola")
@@ -151,5 +152,5 @@ def run_option4():
             new_content = add_file()
             add_2(workbook , new_content)
         elif option == "3":
-            pass
+            break
 

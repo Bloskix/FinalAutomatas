@@ -1,5 +1,6 @@
-from Menu import file_name
 import pandas as pd
+
+file_name = r"Listado temas 2023.xlsx"
 
 def best_ratio_songs():
     try:
