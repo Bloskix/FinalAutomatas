@@ -1,5 +1,5 @@
 import os, time
-from Opciones import Opcion1, Opcion2, Opcion3, Opcion4, Opcion5, Opcion6
+import Opcion1, Opcion2, Opcion3, Opcion4, Opcion5, Opcion6
 
 def menu():
     os.system('cls')
@@ -20,31 +20,33 @@ def read_option():
 def action(option):
     if option == "1":
         print("Elejiste la opción 1")
-        time.sleep(3)
-        Opcion1.submenu()
+        time.sleep(2)
+        Opcion1.run_option1()
     elif option == "2":
         print("Elejiste la opción 2")
-        time.sleep(3)
-        Opcion2
+        time.sleep(2)
+        Opcion2.run_option2()
     elif option == "3":
         print("Elejiste la opción 3")
-        time.sleep(3)   
-        Opcion3
+        time.sleep(2)   
+        Opcion3.run_option3()
     elif option == "4":
         print("Elejiste la opción 4")
-        time.sleep(3)
-        Opcion4
+        time.sleep(2)
+        Opcion4.run_option4()
     elif option == "5":
         print("Elejiste la opción 5")
-        time.sleep(3)
-        Opcion5
+        time.sleep(2)
+        Opcion5.run_option5()
     elif option == "6":
         print("Elejiste la opción 6")
-        time.sleep(3)
-        Opcion6
+        time.sleep(2)
+        Opcion6.run_option6()
     elif option == "7":
         print("Cerrando programa...")
         pass
+
+file_name = r"Listado temas 2023.xlsx"
 
 while True:
     menu()

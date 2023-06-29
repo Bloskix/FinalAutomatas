@@ -1,9 +1,9 @@
-#Listar las 5 canciones con mejor ratio
+from Menu import file_name
 import pandas as pd
 
 def best_ratio_songs():
     try:
-        df = pd.read_excel(r"C:/Users/pablo/OneDrive/Escritorio/UM/Programacion I/Visua_Studio_Code/Python/Final_automatas/Listado temas 2023.xlsx")
+        df = pd.read_excel(file_name)
         df["Ratio"] = (df["Likes"] / df["Views"])*100
         sorted_by = df.sort_values(by="Ratio", ascending=False)
         top_songs = sorted_by.head(5).reset_index(drop=True)
@@ -13,5 +13,6 @@ def best_ratio_songs():
     except Exception as e:
         print("Ocurrió un error:", str(e))
 
-print("Las 5 canciones con mas ratio son:")
-best_ratio_songs()
+def run_option2():
+    print("Las 5 canciones con mas ratio son:")
+    best_ratio_songs()

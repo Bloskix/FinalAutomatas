@@ -1,8 +1,9 @@
 import pandas as pd
+from Menu import file_name
 
 def top_10_largest_songs():
     try:
-        df = pd.read_excel(r"DATA_FRAME") 
+        df = pd.read_excel(file_name) 
         df_sorted = df.sort_values(by='Duration_ms', ascending=False)
         largest_songs = df_sorted.head(10)
         for index, row in largest_songs.iterrows():
@@ -15,5 +16,6 @@ def top_10_largest_songs():
     except Exception as e:
         print("Ocurrió un error:", str(e))
 
-print("Las 10 canciones mas largas son:")
-top_10_largest_songs()
+def run_option5():
+    print("Las 10 canciones mas largas son:")
+    top_10_largest_songs()

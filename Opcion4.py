@@ -1,6 +1,7 @@
 import pandas as pd
 import re, time
 from openpyxl import load_workbook
+from Menu import file_name
 
 def submenu():
     print("1.Agregar por consola")
@@ -78,7 +79,7 @@ def add_1(workbook):
 
     write_row(new_row, sheet)
 
-    workbook.save(filename='C:/Users/pablo/OneDrive/Escritorio/UM/Programacion I/Visua_Studio_Code/Python/Final_automatas/Listado temas 2023.xlsx')
+    workbook.save(filename = file_name)
     print("El archivo se ha actualizado correctamente.")
     time.sleep(2)   
 
@@ -135,20 +136,20 @@ def add_2(workbook, new_content):
         create_empty_row(workbook)
         write_row(line, sheet)
 
-    workbook.save(filename='C:/Users/pablo/OneDrive/Escritorio/UM/Programacion I/Visua_Studio_Code/Python/Final_automatas/Listado temas 2023.xlsx')
+    workbook.save(filename = file_name)
     print("El archivo se ha actualizado correctamente.")
     time.sleep(2) 
 
-
-while True:
-    submenu()
-    option = read_option()
-    workbook = load_workbook(filename='C:/Users/pablo/OneDrive/Escritorio/UM/Programacion I/Visua_Studio_Code/Python/Final_automatas/Listado temas 2023.xlsx')
-    if option == "1":
-        add_1(workbook)
-    elif option == "2":
-        new_content = add_file()
-        add_2(workbook , new_content)
-    elif option == "3":
-        pass
+def run_option4():
+    while True:
+        submenu()
+        option = read_option()
+        workbook = load_workbook(filename = file_name)
+        if option == "1":
+            add_1(workbook)
+        elif option == "2":
+            new_content = add_file()
+            add_2(workbook , new_content)
+        elif option == "3":
+            pass
 
