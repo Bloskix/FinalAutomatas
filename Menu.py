@@ -10,10 +10,11 @@ def menu():
     print("4.Agregar una nueva cancion")
     print("5.Listar las 10 canciones mas largas")
     print("6.Listar los 10 artistas con mas reproducciones")
+    print("7.Salir")
     
 def read_option():
     option = input("Ingresa una opción: ")
-    while not option.isdigit() or int(option) < 1 or int(option) > 6:
+    while not option.isdigit() or int(option) < 1 or int(option) > 7:
         option = input("Opción inválida. Ingresa una opción válida: ")
     return option
 
@@ -44,13 +45,13 @@ def action(option):
         Opcion6.run_option6()
     elif option == "7":
         print("Cerrando programa...")
-        pass
+        time.sleep(2)
+        exit()
 
 while True:
     menu()
     option = read_option()
     action(option)
-    break
 
 
 
